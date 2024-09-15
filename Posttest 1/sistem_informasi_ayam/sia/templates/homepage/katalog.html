@@ -1,0 +1,81 @@
+{% extends '../layout.html' %}
+{% block title %} Homepage {% endblock %}
+{% block content %}
+{% load static %}
+<section>
+    
+    <!-- Search Bar -->
+    <form class="form-inline my-2 my-sm-0" id="search-katalog">
+        <input class="form-control mr-sm-2" type="search" placeholder="Coming Soon" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Soon</button>
+    </form>
+
+    <!-- Display Card -->
+    <div class="container-fluid mb-5">
+        <div class="row justify-content-evenly gy-3 gx-1">
+            <div class="card col-sm-4 card-display-landing" style="width: 24rem;">
+                <img src="{% static 'sia/asset/ayam-kampung-super.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title">Ayam Kampung Super</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Ayam</h6>
+                        <p class="card-text">
+                            Persilangan unggul antara ayam kampung dan ras pedaging yang tumbuh cepat dengan rasa khas.
+                        </p>
+                </div>
+            </div>
+            <div class="card col-sm-4 card-display-landing" style="width: 24rem;">
+                <img src="{% static 'sia/asset/ayam-minecraft.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title">Ayam Minecraft</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Ayam Anime</h6>
+                        <p class="card-text">
+                            Jenis ayam yang bahkan jantannya bisa bertelur.
+                        </p>
+                </div>
+            </div>
+            <div class="card col-sm-4 card-display-landing" style="width: 24rem;">
+                <img src="{% static 'sia/asset/ayam-hybro.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title">Ayam Broiler Hybro</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Ayam</h6>
+                        <p class="card-text">
+                            Ayam jenis ini juga memiliki perfroma yang baik di daerah tropis dan memiliki ketahanan
+                            terhadap penyakit ascites.
+                        </p>
+                </div>
+            </div>
+            <div class="card col-sm-4 card-display-landing" style="width: 24rem;">
+                <img src="{% static 'sia/asset/ayam-hybro.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title">Ayam Broiler Hybro</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Ayam</h6>
+                        <p class="card-text">
+                            Ayam jenis ini juga memiliki perfroma yang baik di daerah tropis dan memiliki ketahanan
+                            terhadap penyakit ascites.
+                        </p>
+                    </div>
+                </div>
+                <div class="card col-sm-4 card-display-landing" style="width: 24rem;">
+                    <img src="{% static 'sia/asset/ayam-kampung-super.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-title">Ayam Kampung Super</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Ayam</h6>
+                            <p class="card-text">
+                                Persilangan unggul antara ayam kampung dan ras pedaging yang tumbuh cepat dengan rasa khas.
+                            </p>
+                    </div>
+                </div>
+            <div class="card col-sm-4 card-display-landing" style="width: 24rem;">
+                <img src="{% static 'sia/asset/ayam-minecraft.jpeg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h6 class="card-title">Ayam Minecraft</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Ayam Anime</h6>
+                        <p class="card-text">
+                            Jenis ayam yang bahkan jantannya bisa bertelur.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

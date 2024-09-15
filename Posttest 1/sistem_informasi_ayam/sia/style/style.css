@@ -1,0 +1,112 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #bf4641;
+}
+
+* {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--primary-color) !important;
+}
+
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.landing {
+    width: 100%;
+    height: 650px;
+}
+
+.landing-img {
+    background-image: url("/static/sia/asset/bg-broiler_facility-001-Bukhanovskyy.jpg") ;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 55%;
+}
+
+.landing-text {
+    height: 100%;
+    width: 45%;
+    color: var(--secondary-color);
+}
+
+.landing-button {
+    width: fit-content;
+    height: fit-content;
+    font-size: 1.5vh;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border: solid var(--secondary-color) 2px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition:         0.15s ease-in;
+    -o-transition:      0.15s ease-in;
+    -ms-transition:     0.15s ease-in;
+    -moz-transition:    0.15s ease-in;
+    -webkit-transition: 0.15s ease-in;
+}
+
+.landing-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.card-display-landing:hover {
+    transition:         0.3s ease-in;
+    -o-transition:      0.3s ease-in;
+    -ms-transition:     0.3s ease-in;
+    -moz-transition:    0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    cursor: pointer;
+    -webkit-box-shadow:0px 0px 5px 1px var(--secondary-color);
+    -moz-box-shadow: 0px 0px 5px 1px var(--secondary-color);
+    box-shadow: 0px 0px 5px 1px var(--secondary-color);  
+}
+
+.katalog-name {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 2.4vw;
+}
+
+@media (max-width: 768px) {
+    .landing {
+        height: 480px;
+    }
+
+    .landing-button {
+        font-size: 0.7vh;
+        margin: 2px;
+    }
+
+    .landing-button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px !important;
+        margin-top: 20px;
+    }
+}
+
+/* ABOUT US STYLE */
+
+.about-us svg {
+    fill: var(--secondary-color);
+}
+
+.about-us h4{
+    color: var(--secondary-color);
+}

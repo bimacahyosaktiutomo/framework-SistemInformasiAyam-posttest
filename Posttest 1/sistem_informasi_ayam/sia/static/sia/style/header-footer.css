@@ -1,0 +1,130 @@
+:root {
+    --primary-color: white;
+    --secondary-color: #bf4641;
+}
+
+* {
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    background-color: var(--primary-color) !important;
+}
+
+ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.header-color {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: sticky;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: fit-content;
+    z-index: 999;
+}
+
+.addShadow-scroll {
+    -webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.75);
+}
+
+.header-color a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.header-color svg {
+    fill: var(--secondary-color);
+}
+
+.nav-header-item {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.nav-header-item li{
+    padding: 3;
+    height: 70%;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-header-item li:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color);
+    font-size: larger;  
+}
+
+.nav-dropdown {
+    display: none;
+    text-align: center;
+    line-height: 2;
+}
+
+.hamburger {
+    display: none;
+    /* display: flex; */
+    align-items: center;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    background-color: #bf4641;
+    color: var(--primary-color);
+}
+
+.footer-logo {
+    width: 60%;
+    padding-bottom: 10px;
+    border-bottom: solid 5px var(--primary-color);
+}
+
+.footer-logo i{
+    font-size: 2rem;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .nav-header-item {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+    }
+    
+    .nav-dropdown.show {
+        display: block;
+    }
+
+    .nav-dropdown li:hover{
+        border-bottom: 2px solid var(--secondary-color);
+        transition: 0.4s ease-in-out;
+        font-size: larger;
+        cursor: pointer;
+        color: var(--primary-color);
+    }
+}
