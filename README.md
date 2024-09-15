@@ -13,3 +13,7 @@
 ### About 
 ---
 ![127 0 0 1_8000_about](https://github.com/user-attachments/assets/78e86fb1-bf63-4eef-b5c7-7a8c54237884)
+
+
+### Responsiv bang
+![127 0 0 1_8000_responsive](https://github.com/user-attachments/assets/82878977-3ca8-460a-a820-ba7afd1a3db4)
