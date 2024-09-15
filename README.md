@@ -1,6 +1,7 @@
 # framework-SistemInformasiAyam-posttest
 # **Posttest 1**
-
+## Nama : Bimasakti Cahyo Utomo
+## NIM  : 2209106021
 ### Landing Page 
 ---
 ![127 0 0 1_8000_](https://github.com/user-attachments/assets/62b98706-540e-4e10-932d-2acdb6a36b0e)
