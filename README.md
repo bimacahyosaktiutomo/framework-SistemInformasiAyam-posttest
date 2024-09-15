@@ -19,5 +19,5 @@
 
 ### Responsiv bang
 ---
-![127 0 0 1_8000_responsive](https://github.com/user-attachments/assets/82878977-3ca8-460a-a820-ba7afd1a3db4)
+![127 0 0 1_8000_responsive](https://github.com/user-attachments/assets/6dbbde4e-aa17-452a-87c7-f0a2895d4ead)
 ---
