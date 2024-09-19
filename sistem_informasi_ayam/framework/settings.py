@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sia',
     'django_bootstrap5',
+    'django_seed' # Seeder
 ]
 
 MIDDLEWARE = [
@@ -77,8 +78,13 @@ WSGI_APPLICATION = 'framework.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sistem_informasi_ayam',  # Nama database yang telah dibuat di phpMyAdmin
+        'USER': 'root',  # User default MySQL di XAMPP
+        # Biasanya password default di XAMPP kosong (tidak diisi)
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',  # Host MySQL di XAMPP (localhost)
+        'PORT': '3306',
     }
 }
 
