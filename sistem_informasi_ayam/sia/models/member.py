@@ -7,4 +7,4 @@ class Members(models.Model):
     password = models.CharField(max_length=13)
 
     def __str__(self):
-        return self.name
+        return self.username
