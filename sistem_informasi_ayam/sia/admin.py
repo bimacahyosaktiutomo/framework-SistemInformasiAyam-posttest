@@ -18,7 +18,7 @@ class OverseerAdmin(admin.ModelAdmin):
             'password': make_password('default_password'),
             'role':Users.OVERSEER
         })
-
+        
         if not created:
             user.role = Users.OVERSEER
             user.save()
