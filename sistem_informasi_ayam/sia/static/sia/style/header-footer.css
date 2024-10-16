@@ -24,6 +24,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-bottom: 0 !important;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 .header-color {
     top: 0;
     bottom: 0;
@@ -71,7 +78,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 .nav-dropdown {
-    display: none;
+    /* display: none; */
     text-align: center;
     line-height: 2;
 }
@@ -80,6 +87,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     display: none;
     /* display: flex; */
     align-items: center;
+}
+
+#hamburgerIcon {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+#hamburgerIcon.rotate {
+    transform: rotate(90deg);
 }
 
 .footer {
@@ -116,9 +132,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         cursor: pointer;
     }
     
-    .nav-dropdown.show {
+    /* .nav-dropdown.show {
         display: block;
-    }
+    } */
 
     .nav-dropdown li:hover{
         border-bottom: 2px solid var(--secondary-color);

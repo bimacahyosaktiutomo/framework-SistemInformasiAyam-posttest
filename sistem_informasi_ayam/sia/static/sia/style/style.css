@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .landing-button {
     width: fit-content;
     height: fit-content;
-    font-size: 1.5vh;
+    font-size: 1rem;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     border: solid var(--secondary-color) 2px;
@@ -59,8 +59,17 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     -webkit-transition: 0.15s ease-in;
 }
 
+.landing-button a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
 .landing-button:hover {
     background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.landing-button:hover a{
     color: var(--primary-color);
 }
 
@@ -88,7 +97,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     }
 
     .landing-button {
-        font-size: 0.7vh;
+        font-size: 0.5rem;
         margin: 2px;
     }
 
@@ -144,5 +153,42 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 #search-katalog button:hover{
     background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Dashboard Style */
+
+.form-modal{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-modal input textarea{
+    border: 5px solid black;
+    border-radius: 10px;
+    outline: none;
+}
+
+.form-modal input:focus, textarea:focus {
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0 5px var(--secondary-color);
+}
+
+.table-aksi-button {
+    color: black;
+    background-color: rgb(89, 244, 72);
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 1.3rem;
+    transition: 0.3s ease-in;
+}
+
+.table-aksi-button.sampah {
+    background-color: rgb(244, 112, 72);
+}
+
+.table-aksi-button:hover {
     color: var(--primary-color);
 }

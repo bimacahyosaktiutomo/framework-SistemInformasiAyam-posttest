@@ -1,0 +1,34 @@
+<!-- <form class="" action="" method="POST" enctype="multipart/form-data"> -->
+    <div class="modal-body form-modal">
+        {% csrf_token %}
+        <!-- Nama -->
+        <label for="id_name">Nama</label>
+        <input type="text" id="id_name" name="name" maxlength="30" value="{{ form.name.value|default_if_none:'' }}" required>
+        <div class="invalid-feedback">{{form.name.errors}}</div>
+        <!-- Deskripsi -->
+        <label for="id_deskripsi">Deskripsi</label>
+        <textarea id="id_deskripsi" name="description" maxlength="100" rows="5"
+            style="resize: none;">{{ form.description.value|default_if_none:'' }}</textarea>
+        <!-- <input type="text" id="id_deskripsi" name="deskripsi" value="{{form.description.value|default_if_none:''}}" required> -->
+        <div class="invalid-feedback">{{form.description.errors}}</div>
+        <!-- Kategori -->
+        <label for="id_kategori">Kategori</label>
+        <select class="form-select" id="id_kategori" name="kategori">
+            <option value="Bibit" {% if form.kategori.value == "Bibit" %}selected{% endif %}>Bibit</option>
+            <option value="Indukan" {% if form.kategori.value == "Indukan" %}selected{% endif %}>Indukan</option>            
+        </select>
+        <!-- Stok -->
+        <label for="id_stok">Stok</label>
+        <input type="number" id="id_stok" name="stok" value="{{ form.stok.value|default_if_none:'' }}" min="0" required>
+        <div class="invalid-feedback">{{form.stok.errors}}</div>
+        <!-- Gambar -->
+        <label for="id_image">Gambar</label>
+        <input type="file" id="id_image" name="image" accept="image/*" onchange="PreviewImage();">
+        <div class="invalid-feedback">{{form.image.errors}}</div>
+        <img id="imgPreview" src="" alt="" style="max-width: 100px; max-height: 100px;">
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="submit" class="btn btn-primary">Simpan</button>
+    </div>
+<!-- </form> -->

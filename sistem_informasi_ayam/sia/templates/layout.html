@@ -33,12 +33,14 @@
                     <li class="nav-item d-flex align-items-center"><a class="m-2" href="{% url 'about' %}">About</a></li>
                     <li class="nav-item d-flex align-items-center"><a class="m-2" href="{% url 'katalog' %}">Katalog</a></li>
                 </ul>
-                <div class="hamburger" onclick="toggleDropdown()">
+
+                <a class="hamburger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHeader" onclick="toggleDropdown()">
                     <i id="hamburgerIcon" class="fa-solid fa-bars"></i>
-                </div>
+                </a>
             </div>
-            <!-- Bagian dropdown saat ukuran layar dibawah 540px -->
-            <div class="container-fluid nav-dropdown" style="width: 100%;">
+            <!-- Bagian dropdown saat ukuran layar dibawah 768px -->
+
+            <div class="collapse container-fluid nav-dropdown" id="collapseHeader" style="width: 100%;">
                 <ul class="">
                     <li class=""><a class="" href="{% url 'katalog' %}">Katalog</a></li>
                     <li class=""><a class="" href="{% url 'about' %}">Tentang</a></li>
@@ -46,6 +48,19 @@
             </div>
         </nav>
     </header>
+    <div class="container mt-4 info-alert" >
+        {% if messages %}
+        <div>
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
     {% block content %}
     {% endblock %}
     

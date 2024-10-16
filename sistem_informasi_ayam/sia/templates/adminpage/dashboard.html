@@ -1,0 +1,121 @@
+{% extends '../layout.html' %}
+{% block title %} Dashboard {% endblock %}
+{% block content %}
+{% load static %}
+<section class="d-flex justify-content-start flex-column px-5 py-1" style="min-height: 80vh;">
+    <div id="table-aksi" class="d-flex flex-row justify-content-between px-3 pb-3">
+        <h1>Produk</h1>
+        <button type="button" value="" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#tambahModal">
+            Tambah
+        </button>
+    </div>
+    <!-- Modal Tambah-->
+    <div class="modal fade" id="tambahModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Produk</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- <form class="" action="{% url 'dashboard' %}" method="post" enctype="multipart/form-data"> -->
+                <form class="" action="{% url 'dashboard' %}" method="post" enctype="multipart/form-data">
+                    {% include 'adminpage/produks/form.html' %}
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Search Bar -->
+    <form class="form-inline my-2 my-sm-0" id="search-katalog" action="{% url 'dashboard' %}" method="get">
+        <input class="form-control mr-sm-2" type="search" name="q" placeholder="Cari.." value="{{ query|default:'' }}" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
+    </form>
+    <!-- Table -->
+    <table class="text-center">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Deskripsi</th>
+                <th scope="col">Kategori</th>
+                <th scope="col">Stok</th>
+                <th scope="col">Gambar</th>
+                <th scope="col">Aksi</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for produks in produks %}
+            <tr>
+                <th scope="row">{{produks.id}}</th>
+                <td>{{produks.name}}</td>
+                <td>{{produks.description}}</td>
+                <td>{{produks.kategori}}</td>
+                <td>{{produks.stok}}</td>
+                <td> {% if produks.image %}
+                    <img src="{{ produks.image.url }}" alt="{{ produks.name }}"
+                        style="max-width: 100px; max-height: 100px;">
+                    {% else %}
+                    No image available
+                    {% endif %}
+                </td>
+                <!-- Tombol Aksi -->
+                <td class="d-flex justify-content-evenly align-items-center" height="60">
+                    <a href="{% url 'produks_edit' produks.id %}" class="table-aksi-button" >
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </a>
+                    <button class="table-aksi-button sampah" onclick="confirmDelete({{produks.id}})">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </td>
+            </tr>
+            {% empty %}
+            <tr class="text-start">
+                <td colspan="7">Tidak ada Produk</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function confirmDelete(produksId) {
+        Swal.fire({
+            title: 'Produk akan dihapus',
+            text: 'Produk tidak akan bisa dikembalikan!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Ya, Hapus!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Ini AJAX
+                fetch(`/adminpage/delete/${produksId}`, {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        Swal.fire(
+                            'Deleted!',
+                            'Produk berhasil dihapus.',
+                            'success'
+                        ).then(() => {
+                            // Reload the page after success
+                            window.location.reload();
+                        });
+                    } else {
+                        Swal.fire(
+                            'Error!',
+                            'Gagal menghapus produk.',
+                            'error'
+                        );
+                    }
+                });
+            }
+        });
+    }
+</script>
+{% endblock %}
