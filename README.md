@@ -80,3 +80,22 @@
    - sia\asset\indihome.png
    - sia\asset\kucing-sigma.png
    - sia\asset\laptop-saya.png
+---
+
+## **Posttest 4**
+### A. Screenshot CRUD
+#### 1. Tambah
+![127 0 0 1_8000_adminpage_tambah](https://github.com/user-attachments/assets/49fa7c15-e313-40fb-b3ce-e0887e000454)
+---
+#### 2. Edit
+![127 0 0 1_8000_adminpage_update_2](https://github.com/user-attachments/assets/bcc747b3-1d6a-4cad-a7ba-7a8ee246ba86)
+---
+#### 3. Hapus
+![127 0 0 1_8000_adminpage_hapus](https://github.com/user-attachments/assets/34570bbc-c77a-454f-86e8-532960a6a8ad)
+---
+#### 4. Table
+![127 0 0 1_8000_adminpage_](https://github.com/user-attachments/assets/35e97bd6-2338-4f54-8b4f-17a9fbd84e2d)
+---
+### B. Searching
+![127 0 0 1_8000_adminpage__q=Ayam+Minecraft](https://github.com/user-attachments/assets/881aee76-c1ef-41f5-99a7-c1b9ff6cdb21)
+---
